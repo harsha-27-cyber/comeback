@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/bg_primary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="52dp"
+        android:paddingBottom="24dp">
+
+        <!-- ── Header ── -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="6dp">
+
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_icon_glow"
+                android:gravity="center"
+                android:layout_marginEnd="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⚡"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Comeback"
+                    android:textColor="@color/text_primary"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="-0.01" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Block distracting apps &amp; notifications with an unbreakable timer"
+                    android:textColor="@color/text_muted"
+                    android:textSize="12sp"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Subtle divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/stroke"
+            android:layout_marginBottom="20dp" />
+
+        <!-- ── Countdown / Status Card ── -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardCountdown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/bg_card"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/accent_border"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingTop="28dp"
+                android:paddingBottom="28dp"
+                android:paddingHorizontal="20dp">
+
+                <!-- Status pill -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:background="@drawable/bg_pill_accent"
+                    android:gravity="center"
+                    android:paddingHorizontal="14dp"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:id="@+id/tvCountdownLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="READY TO FOCUS"
+                        android:textColor="@color/accent_glow"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.1" />
+                </LinearLayout>
+
+                <!-- Timer digits -->
+                <TextView
+                    android:id="@+id/tvCountdownTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00:00"
+                    android:textColor="@color/text_primary"
+                    android:textSize="52sp"
+                    android:textStyle="bold"
+                    android:fontFamily="monospace"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/tvCountdownSubtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Choose allowed apps and duration below"
+                    android:textColor="@color/text_muted"
+                    android:textSize="13sp"
+                    android:textAlignment="center" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ── Permissions Card ── -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardPermissions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/bg_card"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/stroke"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🔐"
+                        android:textSize="16sp"
+                        android:layout_marginEnd="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Required Permissions"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary" />
+                </LinearLayout>
+
+                <!-- Permission row 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_permission_row"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="10dp"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/tvAccessibilityStatus"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="App Blocker (Accessibility)"
+                        android:textSize="13sp"
+                        android:textColor="@color/text_secondary" />
+
+                    <Button
+                        android:id="@+id/btnEnableAccessibility"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:text="Enable"
+                        android:textSize="12sp"
+                        android:textColor="@color/accent_glow" />
+                </LinearLayout>
+
+                <!-- Permission row 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_permission_row"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="10dp"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/tvNotificationStatus"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Notification Blocker"
+                        android:textSize="13sp"
+                        android:textColor="@color/text_secondary" />
+
+                    <Button
+                        android:id="@+id/btnEnableNotification"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:text="Enable"
+                        android:textSize="12sp"
+                        android:textColor="@color/accent_glow" />
+                </LinearLayout>
+
+                <!-- Permission row 3 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_permission_row"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="10dp">
+
+                    <TextView
+                        android:id="@+id/tvAdminStatus"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Anti-Uninstall Protection"
+                        android:textSize="13sp"
+                        android:textColor="@color/text_secondary" />
+
+                    <Button
+                        android:id="@+id/btnEnableAdmin"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:text="Enable"
+                        android:textSize="12sp"
+                        android:textColor="@color/accent_glow" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ── Config Section ── -->
+        <LinearLayout
+            android:id="@+id/layoutConfig"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Lock Mode Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/bg_card"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/stroke"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="14dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="🛡️"
+                            android:textSize="15sp"
+                            android:layout_marginEnd="8dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Locking Mode"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_primary" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:id="@+id/rgLockMode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/rbModeWhitelist"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Block ALL apps except selected allowed apps (Recommended)"
+                            android:checked="true"
+                            android:textSize="13sp"
+                            android:textColor="@color/text_secondary"
+                            android:paddingVertical="4dp" />
+
+                        <RadioButton
+                            android:id="@+id/rbModeBlacklist"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Block ONLY selected apps"
+                            android:textSize="13sp"
+                            android:textColor="@color/text_secondary"
+                            android:paddingVertical="4dp" />
+                    </RadioGroup>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- App Selection Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPickApps"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="Select Allowed Apps (0 selected)"
+                android:textSize="14sp"
+                android:textColor="@color/accent_glow"
+                app:icon="@drawable/ic_lock"
+                app:iconGravity="textStart"
+                app:iconTint="@color/accent_glow"
+                app:cornerRadius="14dp"
+                app:backgroundTint="@color/accent_dim"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/accent_border"
+                android:layout_marginBottom="10dp" />
+
+            <!-- Deactivate Admin -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDeactivateAdmin"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:text="Deactivate Admin (To Uninstall)"
+                android:textSize="13sp"
+                android:textColor="@color/danger"
+                app:strokeColor="@color/danger_dim"
+                app:strokeWidth="1dp"
+                app:cornerRadius="14dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Duration Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/bg_card"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/stroke"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="14dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="⏱️"
+                            android:textSize="15sp"
+                            android:layout_marginEnd="8dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Select Duration"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_primary" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutDurationInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:background="@color/bg_input">
+                            <NumberPicker
+                                android:id="@+id/npHours"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Hrs"
+                                android:textSize="11sp"
+                                android:textColor="@color/text_muted"
+                                android:gravity="center" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=":"
+                            android:textSize="22sp"
+                            android:textColor="@color/accent_primary"
+                            android:textStyle="bold"
+                            android:layout_marginHorizontal="8dp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:background="@color/bg_input">
+                            <NumberPicker
+                                android:id="@+id/npMinutes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Min"
+                                android:textSize="11sp"
+                                android:textColor="@color/text_muted"
+                                android:gravity="center" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=":"
+                            android:textSize="22sp"
+                            android:textColor="@color/accent_primary"
+                            android:textStyle="bold"
+                            android:layout_marginHorizontal="8dp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:background="@color/bg_input">
+                            <NumberPicker
+                                android:id="@+id/npSeconds"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sec"
+                                android:textSize="11sp"
+                                android:textColor="@color/text_muted"
+                                android:gravity="center" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <!-- ── Start Button ── -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnStartLock"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:text="Start Focus Lock"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_inverse"
+            app:cornerRadius="16dp"
+            app:backgroundTint="@color/accent_primary"
+            android:layout_marginBottom="16dp" />
+
+        <!-- ── Safety Notice ── -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_notice"
+            android:paddingHorizontal="14dp"
+            android:paddingVertical="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚡"
+                android:textSize="14sp"
+                android:layout_marginEnd="8dp"
+                android:layout_gravity="top"
+                android:paddingTop="1dp" />
+
+            <TextView
+                android:id="@+id/tvWarning"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="While Comeback is active: Blocked apps and notifications are silenced, and the app cannot be uninstalled or force closed until the timer expires. Emergency dialer and phone calls always remain accessible."
+                android:textSize="12sp"
+                android:textColor="@color/text_muted"
+                android:lineSpacingExtra="3dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

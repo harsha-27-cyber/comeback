@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Comeback</string>
+    <string name="app_subtitle">Block apps &amp; notifications with an unbreakable countdown timer</string>
+    <string name="status_checking">Checking permissions…</string>
+    <string name="select_apps">Select Allowed Apps</string>
+    <string name="start_lock">Start Focus Lock</string>
+    <string name="device_admin_label">Comeback Device Administrator</string>
+    <string name="device_admin_description">Prevents uninstalling Comeback while a focus timer is active.</string>
+    <string name="accessibility_description">Monitors opened apps to enforce blocking and prevents bypassing the lock timer.</string>
+    <string name="notification_listener_description">Silences and removes incoming notifications from blocked apps during a focus session.</string>
+</resources>

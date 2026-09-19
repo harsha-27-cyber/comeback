@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Legacy (keep for lint) -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Comeback Design System -->
+    <!-- Backgrounds -->
+    <color name="bg_primary">#08060F</color>
+    <color name="bg_surface">#100D1E</color>
+    <color name="bg_card">#18142B</color>
+    <color name="bg_card_alt">#1E1835</color>
+    <color name="bg_input">#0F0C1C</color>
+
+    <!-- Accent - Electric Violet / Neon Purple -->
+    <color name="accent_primary">#A855F7</color>
+    <color name="accent_secondary">#7C3AED</color>
+    <color name="accent_glow">#C084FC</color>
+    <color name="accent_dim">#2D1B4E</color>
+    <color name="accent_border">#4C2888</color>
+
+    <!-- Neon Cyan (secondary accent for timer/status) -->
+    <color name="neon_cyan">#22D3EE</color>
+    <color name="neon_cyan_dim">#0E4A5C</color>
+
+    <!-- Text -->
+    <color name="text_primary">#F4F0FF</color>
+    <color name="text_secondary">#9B8EC4</color>
+    <color name="text_muted">#5C5280</color>
+    <color name="text_inverse">#08060F</color>
+
+    <!-- Status -->
+    <color name="success">#34D399</color>
+    <color name="success_dim">#0D3A2A</color>
+    <color name="danger">#F87171</color>
+    <color name="danger_dim">#3A0D0D</color>
+    <color name="warning">#FBBF24</color>
+
+    <!-- Stroke / Divider -->
+    <color name="stroke">#2A2145</color>
+    <color name="stroke_bright">#4A3D70</color>
+
+    <!-- Aliases (kept for compatibility) -->
+    <color name="primary">#A855F7</color>
+    <color name="primary_dark">#7C3AED</color>
+    <color name="accent">#22D3EE</color>
+    <color name="success_green">#34D399</color>
+    <color name="danger_red">#F87171</color>
+    <color name="card_bg">#18142B</color>
+    <color name="timer_bg">#1E1835</color>
+</resources>

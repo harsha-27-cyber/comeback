@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/bg_primary"
+    android:padding="28dp">
+
+    <!-- Glowing lock icon -->
+    <FrameLayout
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginBottom="24dp">
+
+        <View
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:background="@drawable/bg_icon_glow_large" />
+
+        <ImageView
+            android:id="@+id/ivLockIcon"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_lock"
+            app:tint="@color/accent_glow"
+            android:contentDescription="@null" />
+    </FrameLayout>
+
+    <!-- Blocked app name -->
+    <TextView
+        android:id="@+id/tvBlockedAppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="App Blocked"
+        android:textColor="@color/text_primary"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Subtitle -->
+    <TextView
+        android:id="@+id/tvBlockedNotice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This app is blocked during your focus session."
+        android:textColor="@color/text_muted"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:lineSpacingExtra="3dp"
+        android:layout_marginBottom="32dp" />
+
+    <!-- Timer card -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@color/bg_card"
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/accent_border"
+        android:layout_marginBottom="28dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingVertical="24dp"
+            android:paddingHorizontal="20dp">
+
+            <!-- Label pill -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:background="@drawable/bg_pill_accent"
+                android:gravity="center"
+                android:paddingHorizontal="12dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TIME REMAINING"
+                    android:textColor="@color/accent_glow"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.12" />
+            </LinearLayout>
+
+            <!-- Countdown -->
+            <TextView
+                android:id="@+id/tvOverlayCountdown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00:00"
+                android:textColor="@color/text_primary"
+                android:textSize="48sp"
+                android:textStyle="bold"
+                android:fontFamily="monospace"
+                android:layout_marginBottom="10dp" />
+
+            <!-- Fine print -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Comeback cannot be uninstalled until the timer finishes"
+                android:textColor="@color/text_muted"
+                android:textSize="11sp"
+                android:textAlignment="center" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Go Home button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnOverlayHome"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:text="Return to Home Screen"
+        android:textColor="@color/text_inverse"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/accent_primary"
+        app:cornerRadius="14dp"
+        android:layout_marginBottom="12dp" />
+
+    <!-- View Allowed Apps button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnOverlayOpenFocusLock"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="View Allowed Apps"
+        android:textColor="@color/text_secondary"
+        app:strokeColor="@color/stroke_bright"
+        app:strokeWidth="1dp"
+        app:cornerRadius="14dp" />
+
+</LinearLayout>

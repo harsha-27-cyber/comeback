@@ -1,0 +1,75 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="192dp"
+    android:height="192dp"
+    android:viewportWidth="192"
+    android:viewportHeight="192">
+
+    <!-- Background Layer: Hexagonal Cyber Shield Shape -->
+    <path
+        android:pathData="M96,12 L171,48 L171,96 C171,144 139,169 96,180 C53,169 21,144 21,96 L21,48 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:centerX="96"
+                android:centerY="96"
+                android:gradientRadius="112"
+                android:type="radial">
+                <item android:color="#FF2D1B4E" android:offset="0.0" />
+                <item android:color="#FF08060F" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Outer Glow / Cyberpunk Border Matrix -->
+    <path
+        android:strokeWidth="2.5"
+        android:pathData="M96,15 L168,50 L168,96 C168,141 138,165 96,176 C54,165 24,141 24,96 L24,50 Z">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:startX="24"
+                android:startY="50"
+                android:endX="168"
+                android:endY="176"
+                android:type="linear">
+                <item android:color="#FFA855F7" android:offset="0.0" />
+                <item android:color="#FF22D3EE" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- The Lock Core: Modern Geometric Design -->
+    <!-- Lock Body -->
+    <path
+        android:fillColor="#FF22D3EE"
+        android:pathData="M60,90 H132 V150 C132,155 128,159 123,159 H69 C64,159 60,155 60,150 Z" />
+
+    <!-- Lock Shackle (The Focus Ring) -->
+    <path
+        android:strokeWidth="9"
+        android:strokeLineCap="round"
+        android:pathData="M75,90 V68 C75,56 84.5,47 96,47 C107.5,47 117,56 117,68 V90">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:startX="75"
+                android:startY="47"
+                android:endX="117"
+                android:endY="90"
+                android:type="linear">
+                <item android:color="#FFA855F7" android:offset="0.0" />
+                <item android:color="#FFC084FC" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Inner Keyhole / Power Pulse -->
+    <path
+        android:fillColor="#FF08060F"
+        android:pathData="M96,112 C101,112 105,116 105,121 C105,125 102.5,128.5 99,130 V141 H93 V130 C89.5,128.5 87,125 87,121 C87,116 91,112 96,112 Z" />
+
+    <!-- Digital "Pulse" lines for uniqueness -->
+    <path
+        android:strokeWidth="1.5"
+        android:strokeColor="#4022D3EE"
+        android:pathData="M66,103 H126 M66,122 H81 M111,122 H126 M66,141 H126" />
+
+</vector>
